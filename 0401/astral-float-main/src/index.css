@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 174 100% 50%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 280 100% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 6% 14%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 120 100% 55%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 174 100% 50%;
+
+    --radius: 0.75rem;
+
+    --neon-cyan: 174 100% 50%;
+    --neon-magenta: 310 100% 65%;
+    --neon-green: 120 100% 55%;
+    --neon-purple: 280 100% 65%;
+
+    --glow-cyan: 0 0 20px hsl(174 100% 50% / 0.4), 0 0 60px hsl(174 100% 50% / 0.15);
+    --glow-magenta: 0 0 20px hsl(310 100% 65% / 0.4), 0 0 60px hsl(310 100% 65% / 0.15);
+    --glow-green: 0 0 20px hsl(120 100% 55% / 0.4), 0 0 60px hsl(120 100% 55% / 0.15);
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(174 100% 50% / 0.6), 0 0 40px hsl(174 100% 50% / 0.2);
+  }
+  .text-glow-magenta {
+    text-shadow: 0 0 10px hsl(310 100% 65% / 0.6), 0 0 40px hsl(310 100% 65% / 0.2);
+  }
+  .text-glow-green {
+    text-shadow: 0 0 10px hsl(120 100% 55% / 0.6), 0 0 40px hsl(120 100% 55% / 0.2);
+  }
+  .border-glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+  .border-glow-magenta {
+    box-shadow: var(--glow-magenta);
+  }
+  .border-glow-green {
+    box-shadow: var(--glow-green);
+  }
+}
